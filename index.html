@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>Bubble Shooter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="game-header">
+      <div>
+        <!-- <h1>Bubble Pop</h1> -->
+      </div>
+      <div class="stats" aria-label="Game statistics">
+        <div><span>Pops</span><strong id="score">0</strong></div>
+        <div><span>Shots</span><strong id="shots">0</strong></div>
+        <div><span>Misses</span><strong id="misses">5</strong></div>
+      </div>
+    </header>
+
+    <section class="game-card">
+      <canvas id="game" width="560" height="700" aria-label="Bubble shooter game"></canvas>
+      <div id="overlay" class="overlay hidden">
+        <div class="overlay-panel">
+          <p id="result-label" class="eyebrow" hidden>BOARD CLEARED</p>
+          <h2 id="result-title">Nice try!</h2>
+          <p id="result-copy">Clear the board before the bubbles reach the danger line.</p>
+          <button id="play-again" type="button">Play again</button>
+        </div>
+      </div>
+    </section>
+
+    <footer class="game-footer">
+      <p><strong>Aim</strong> with your mouse, or press and drag on touch. <strong>Release</strong> to shoot.</p>
+    </footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
